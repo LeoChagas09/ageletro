@@ -1,0 +1,199 @@
+.card {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+.containerAbout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  // gap: 24px;
+  // margin: 34px 0;
+  // padding-top: 54px;
+}
+
+.innerAbout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+
+  p {
+    line-height:  150%;
+  }
+}
+
+.containerAbout {
+  .title {
+    font-size: 34px;
+    color: #121212;
+  }
+}
+
+
+.bannerAbout{
+  position: relative;
+  width: 300px;
+  height: 350px;
+}
+
+.imageAbout{
+  object-fit: cover;
+  width: 300;
+  height: 350px;
+  border-radius: 8px;
+}
+
+@media (min-width: 640px){
+  .containerAbout{
+    flex-direction: row;
+    gap: 34px;
+
+    .title {
+      align-self: flex-start;
+    }
+  }
+}
+
+@media (min-width: 768px){
+  .innerAbout{
+    p{
+      max-width: 80%;
+      align-self: flex-start;
+    }
+  }
+
+  .bannerAbout {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+// Service area
+
+.servicesTitle{
+  text-transform: uppercase;
+  color: #121212;
+  margin: 40px 0 24px 0;
+  text-align: center;
+  font-size: 24px;
+}
+
+.services{
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+
+}
+
+.service p {
+  text-align: center;
+  margin: 8px 0;
+  font-size: 18px;
+  transition: all 0.4s;
+}
+
+.innerService{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imageService{
+  object-fit: cover;
+  border-radius: 8px;
+  width: 280px;
+  height: 350px;
+  transition: all 0.4s;
+}
+
+
+.innerService:hover{
+  .imageService{
+    transform: scale(1.2);
+  }
+
+  + p{
+    font-weight: bold;
+  }
+}
+
+.info {
+  width: 100%;
+  margin-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+  border-radius: 8px;
+  padding: 8px 24px;
+  font-weight: medium;
+  transition: all 0.4s;
+}
+
+.link:hover{
+  transform: scale(1.09);
+}
+
+.serviceDescription {
+  font-size: 1.3rem;
+  color: #121212;
+  margin-bottom: 1.5rem;
+}
+
+.serviceTypes {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.serviceTypeItem {
+  color: #121212;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.serviceTypeItem::before {
+  content: '✔️'; /* Ícone simples antes de cada item */
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+// RESPONSIVIDADE
+@media (min-width: 640px){
+  .services{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+  }
+
+  .innerService{
+    width: 280px;
+    height: 200px;
+  }
+
+  .servicesTitle{
+    font-size: 30px;
+    margin-top: 54px;
+  }
+}
